@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Chatroom{% endblock %}
 {% block body %}
 
+{% if user.is_authenticated %}
 <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-6">
@@ -49,4 +51,13 @@
         document.querySelector('#chat-text').value += (data.username + ': ' + data.message + '\n')
     }
 </script>
+{% else %}
+<div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-6">
+                <label class="h4 pt-5">Please log in your account to access the chatrooms</label>
+            </div>
+        </div>
+</div>
+{% endif %}
 {% endblock %}
