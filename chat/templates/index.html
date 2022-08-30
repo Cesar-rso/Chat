@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
-                    <a href="{{ url room chatroom.room_name }}">{{ chatroom.room_name }}</a>
+                    <a href="{% url 'room' chatroom.room_name %}">{{ chatroom.room_name }}</a>
                 </div>
             </div>
         </div>

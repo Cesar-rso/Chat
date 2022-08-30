@@ -11,7 +11,11 @@
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="h4 pt-5">Chatroom</label>
-                        <textarea class="form-control" id="chat-text" rows="10"></textarea><br>
+                        <textarea class="form-control" id="chat-text" rows="10">
+                            {% for message in messages %}
+                            {{ message.user }}: {{ message.message }} </br>
+                            {% endfor %}
+                        </textarea><br>
                     </div>
                     <div class="form-group">
                         <input class="form-control" id="input" type="text"></br>
