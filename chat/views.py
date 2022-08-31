@@ -4,7 +4,8 @@ from .models import *
 
 
 def room(request, room_name):
-    messages = Messages.objects.filter(room=room_name)
+    # messages = Messages.objects.filter(room=room_name)
+    messages = Messages.objects.all()
     context = {'room_name': room_name, 'messages': messages}
     return render(request, 'chatroom.html', context)
 
