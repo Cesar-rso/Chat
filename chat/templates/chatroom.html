@@ -7,14 +7,14 @@
 <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-6">
-                <form name="exampleFormControlTextarea1" id="exampleFormControlTextarea1">
+                <form name="FormControlTextarea1" id="FormControlTextarea1">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1" class="h4 pt-5">Chatroom</label>
+                        <label for="FormControlTextarea1" class="h4 pt-5">Chatroom</label>
                         <textarea class="form-control" id="chat-text" rows="10">
-                            {% for message in messages %}
-                            {{ message.user }}: {{ message.message }} </br>
-                            {% endfor %}
+                        {% for message in messages %}
+                        {{ message.user }}: {{ message.message }}
+                        {% endfor %}
                         </textarea><br>
                     </div>
                     <div class="form-group">

@@ -4,7 +4,6 @@
   <br>
   <h1>{{ message }}</h1>
   <form action="{% url 'index' %}" method="get">
-      {% csrf_token %}
       <button name="Back" type="submit">Back</button>
   </form>
 
