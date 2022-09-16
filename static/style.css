@@ -1,0 +1,19 @@
+
+ul#vertical_list {
+    width: 100%
+}
+
+ul#vertical_list > li{
+    display: block;
+    width: 90%
+}
+
+ul#vertical_list > li > ul#horizontal_list {
+    width: 90%
+}
+
+ul#vertical_list > li > ul#horizontal_list > li{
+    display: inline;
+    float: left;
+    width: 50%
+}
