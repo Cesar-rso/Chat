@@ -7,7 +7,7 @@ from .models import *
 def room(request, room_name):
 
     try:
-        messages = Messages.objects.filter(chatroom__room_name=room_name)
+        messages = Messages.objects.filter(room__room_name=room_name)
     except Exception as e:
         print(e)
         room_id = Chatroom.objects.get(room_name=room_name)

@@ -12,6 +12,7 @@
                     <div class="form-group">
                         <label for="FormControlTextarea1" class="h4 pt-5">Chatroom</label>
                         <textarea class="form-control" id="chat-text" rows="10">
+                            Welcome!
                         {% for message in messages %}
                         {{ message.user }}: {{ message.message }}
                         {% endfor %}

@@ -8,6 +8,5 @@ urlpatterns = [
     path('signup', signup, name='signup'),
     path('register', register, name='register'),
     path('login', login_request, name='login'),
-    re_path(r'.+login[/]*$', login_request, name='login'),  # Fix this bug
-    re_path(r'.+logout[/]*$', logout_request, name='logout'),
+    path('logout', logout_request, name='logout'),
 ]
